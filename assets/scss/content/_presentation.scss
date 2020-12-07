@@ -1,0 +1,86 @@
+.presentation {
+  padding: 30px;
+
+  color: white;
+  background-color: #1b2046;
+  // margin-bottom: 6px;
+
+  @include lg-min {
+    padding: 90px 320px;
+  }
+  @include md-min {
+    margin-bottom: 0;
+    padding: 70px 200px;
+  }
+  @include sm-min {
+    padding: 50px;
+  }
+
+  &__container {
+    position: relative;
+
+    max-width: 600px;
+
+    h1 {
+      line-height: 51px;
+
+      margin-bottom: 30px;
+
+      color: $color-accent;
+
+      @include lg-min {
+        font-size: 2.625rem;
+      }
+      @include md-min {
+        font-size: 2.375rem;
+
+        text-align: left;
+      }
+      @include sm-min {
+        font-size: 1.75rem;
+
+        text-align: center;
+      }
+    }
+    p {
+      margin-bottom: 10px;
+
+      @include lg-min {
+        margin-bottom: 30px;
+      }
+      @include md-min {
+        margin-bottom: 20px;
+      }
+    }
+
+    &_image {
+      position: absolute;
+      top: 30%;
+      right: 50%;
+
+      transform: translateX(50%) scale(0.75);
+
+      outline: 7px solid rgba($color: $color-accent, $alpha: 0.2);
+
+      @include lg-min {
+        right: -40%;
+
+        transform: scale(1);
+
+        outline: 14px solid rgba($color: $color-accent, $alpha: 0.2);
+      }
+      @include md-min {
+        top: 0;
+        right: -30%;
+
+        transform: scale(0.75);
+
+        outline: 10px solid rgba($color: $color-accent, $alpha: 0.2);
+      }
+
+      img {
+        padding: 20px;
+      }
+    }
+  }
+}

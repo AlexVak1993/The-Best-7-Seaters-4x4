@@ -1,0 +1,27 @@
+.hero {
+  &__image {
+    width: 100%;
+  }
+}
+
+.seat {
+  &__container {
+    right: 0;
+  }
+}
+
+.tiguan {
+  &__container {
+    right: 0;
+  }
+}
+
+.audi {
+  &__container {
+    right: 0;
+
+    & p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

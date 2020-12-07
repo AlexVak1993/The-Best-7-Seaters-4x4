@@ -1,0 +1,112 @@
+.content {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 6px;
+
+  img {
+    width: 100%;
+  }
+
+  &__container {
+    overflow: scroll;
+
+    height: calc(100% - 80px);
+    padding: 30px;
+    padding-bottom: 0;
+
+    background-color: rgba($color: white, $alpha: 0.9);
+
+    @include lg-min {
+      max-width: calc(460px - 92px);
+
+      text-align: left;
+
+      border: 6px solid rgba($color: white, $alpha: 0.9);
+      border-top: none;
+      border-bottom: none;
+    }
+    @include md-min {
+      position: absolute;
+      top: 5px;
+
+      max-width: calc(40% - 92px);
+      padding: 40px;
+
+      text-align: justify;
+    }
+
+    p {
+      line-height: 1em;
+
+      margin-bottom: 10px;
+
+      @include lg-min {
+        line-height: 1.625em;
+
+        margin-bottom: 30px;
+      }
+      @include sm-min {
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: $color-accent;
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
+
+      margin-bottom: 30px;
+    }
+
+    .stats {
+      display: flex;
+
+      text-align: left;
+
+      flex-wrap: wrap;
+
+      &__block {
+        width: 50%;
+        margin-bottom: 30px;
+
+        p {
+          margin: 0;
+
+          &:first-of-type {
+            margin-bottom: 10px;
+          }
+
+          &:nth-child(odd) {
+            font-size: 0.6874rem;
+            font-weight: 600;
+            line-height: 13.5px;
+
+            letter-spacing: 0.1em;
+          }
+          &:nth-child(even) {
+            font-weight: 400;
+            line-height: 30px;
+
+            color: $color-accent;
+
+            @include lg-min {
+              font-size: 1.5rem;
+            }
+            @include md-min {
+              font-size: 1.25rem;
+            }
+
+            span {
+              font-size: 0.875rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}
